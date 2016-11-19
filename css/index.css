@@ -1,0 +1,23 @@
+#main {
+    margin-left: 200px;
+    padding: 0 20px 0 0;
+}
+
+.sidenav {
+    max-width: 250px;
+    margin: -22px 0 0 -9px;
+    padding: 15px;
+    position: fixed;
+    border: 1px solid gray;
+    height: 100%;
+}
+
+#email-list ul li{
+    list-style-type: none;
+    border: 1px solid gray;
+    width: 500px;
+}
+
+.mail-tease {
+    margin: 0 10px;
+}
