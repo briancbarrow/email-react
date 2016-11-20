@@ -1,7 +1,7 @@
-var React = require('react');
-var Mailbox = require('./mailbox');
+import React from 'react';
+import Mailbox from './mailbox';
 
-var SideNav = function(props) {
+export default function SideNav(props) {
     var mail = Object.keys(props.mail).map(function(mailboxId, index) {
         return (
             <li key={index}>
@@ -17,5 +17,3 @@ var SideNav = function(props) {
         </div>
     );
 };
-
-module.exports = SideNav;

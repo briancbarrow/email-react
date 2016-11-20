@@ -1,7 +1,7 @@
-var React = require('react');
-var SideNavContainer = require('./sidenav-container');
+import React from 'react';
+import SideNavContainer from './sidenav-container';
 
-var App = function(props) {
+export default function App(props) {
     return (
         <div>
             <SideNavContainer />
@@ -14,5 +14,3 @@ var App = function(props) {
         </div>
     );
 };
-
-module.exports = App;

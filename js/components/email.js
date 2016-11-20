@@ -1,9 +1,8 @@
-var React = require('react');
-var MAIL = require('../mail');
+import React from 'react';
+import MAIL from '../mail';
 
-var Email = function(props) {
+export default function Email(props) {
     var mailbox = props.params.mailBox.toLowerCase();
-    console.log(MAIL[mailbox][props.params.emailId])
     var email = MAIL[mailbox][props.params.emailId]
     return(
         <div id='mail-content'>
@@ -12,5 +11,3 @@ var Email = function(props) {
         </div>
     ) 
 };
-
-module.exports = Email;

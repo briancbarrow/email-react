@@ -1,17 +1,13 @@
-require('babel-polyfill');
-var React = require('react');
-var ReactDOM = require('react-dom');
-var router = require('react-router');
-var Router = router.Router;
-var Route = router.Route;
-var hashHistory = router.hashHistory;
-var App = require('./components/app');
-var Sidenav = require('./components/sidenav');
-var Email = require('./components/email');
-var EmailList = require('./components/email-list');
-var IndexRoute = router.IndexRoute;
+// require('babel-polyfill');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {Router, Route, hashHistory, IndexRoute} from 'react-router';
+import App from './components/app';
+import Sidenav from './components/sidenav';
+import Email from './components/email';
+import EmailList from './components/email-list';
 
-var routes = (
+const routes = (
     <Router history={hashHistory}>
         <Route path="/mail" component={App}>            
             <Route path=":mailBox" component={EmailList} />
@@ -20,9 +16,6 @@ var routes = (
     </Router>
 );
 
-document.addEventListener('DOMContentLoaded', function() {
-    ReactDOM.render(routes, document.getElementById('app'));
-});
-
-// <Route path=":contactId" component={ContactContainer} />
-// <Route component={SideNavContainer} />
+document.addEventListener('DOMContentLoaded', () => 
+    ReactDOM.render(routes, document.getElementById('app'))
+);

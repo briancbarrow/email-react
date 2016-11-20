@@ -1,9 +1,8 @@
-var React = require('react');
-var MAIL = require('../mail');
-var router = require('react-router');
-var Link = router.Link;
+import React from 'react';
+import MAIL from '../mail';
+import {Link} from 'react-router';
 
-var EmailList = function(props) {
+export default function EmailList(props) {
     var mailbox = props.params.mailBox.toLowerCase();
     var mail = Object.keys(MAIL[mailbox]).map(function(mailId, index) {
         return(
@@ -25,5 +24,3 @@ var EmailList = function(props) {
         </div>
     )
 }
-
-module.exports = EmailList;

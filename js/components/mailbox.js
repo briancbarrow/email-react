@@ -1,13 +1,10 @@
-var React = require('react');
-var router = require('react-router');
-var Link = router.Link;
+import React from 'react';
+import {Link} from 'react-router';
 
-var Mailbox = function(props) {
+export default function Mailbox(props) {
     return (
         <Link className="mailbox" to={'/mail/' + props.name}>
             {props.name}
         </Link>
     );
 };
-
-module.exports = Mailbox;

@@ -1,8 +1,8 @@
-var React = require('react');
-var Sidenav = require('./sidenav');
-var MAIL = require('../mail');
+import React from 'react';
+import Sidenav from'./sidenav';
+import MAIL from '../mail';
 
-var SideNavContainer = function() {
+export default function SideNavContainer() {
     return(
         <div className='sidenav'>
             <h2>Mailboxes</h2>
@@ -10,5 +10,3 @@ var SideNavContainer = function() {
         </div>
     ) 
 };
-
-module.exports = SideNavContainer;

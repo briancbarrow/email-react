@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     inbox: {
         0: {
             id: 0,
